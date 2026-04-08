@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Agentes Conectados</h1>
+    {% for agent in agents %}
+        <div>
+            <h3>{{ agent.id }}</h3>
+            <form action="/execute" method="post">
+                <input type="text" name="command" placeholder="Comando...">
+                <button type="submit">Executar</button>
+            </form>
+        </div>
+    {% endfor %}
+</body>
+</html>
