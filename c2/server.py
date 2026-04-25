@@ -72,7 +72,7 @@ def exchange_key():
         agent_id = data['agent_id']
         encrypted_key = data['session_key']
         
-        # Descriptografa chave de sessão
+        # Decrypt the session key
         session_key = crypto.decrypt_session_key(encrypted_key)
         session_keys[agent_id] = session_key
         

